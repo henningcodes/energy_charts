@@ -171,7 +171,7 @@ def main():
                 y=alt.Y('day_ahead_price_eur_mwh', title='Price (€/MWh)'),
                 color=alt.value('steelblue'),
                 tooltip=['datetime', 'residual_load_mw_avg', 'day_ahead_price_eur_mwh', 'solar_mw_avg']
-            ).properties(height=750).interactive()
+            ).properties(height=600).interactive()
             
             st.altair_chart(chart, use_container_width=True)
             
@@ -199,7 +199,7 @@ def main():
                 y=alt.Y('day_ahead_price_eur_mwh', title='Price (€/MWh)'),
                 color='Label',
                 tooltip=['datetime', 'residual_load_mw_avg', 'day_ahead_price_eur_mwh']
-            ).properties(height=750).interactive()
+            ).properties(height=600).interactive()
             st.altair_chart(comp_chart, use_container_width=True)
 
 if __name__ == "__main__":
